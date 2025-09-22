@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Intake Form - Free Website Build</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .form-container {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #2a5298;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+        }
+        
+        .pricing-note {
+            background: #f8f9fa;
+            border-left: 4px solid #2a5298;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .urgency-banner {
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Free Website Build</h1>
+            <p>Professional website + optional automation services</p>
+        </div>
+        
+        <div class="urgency-banner">
+            🚀 Limited Time: FREE Professional Website Build (Value: $2,000)
+        </div>
+        
+        <form class="form-container" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <!-- Business Information -->
+            <div class="section">
+                <h2>Business Information</h2>
+                
+                <div class="form-group">
+                    <label for="business-name">Business Name <span class="required">*</span></label>
+                    <input type="text" id="business-name" name="business_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="owner-name">Owner/Contact Name <span class="required">*</span></label>
+                    <input type="text" id="owner-name" name="owner_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="industry">Industry <span class="required">*</span></label>
+                    <select id="industry" name="industry" required>
+                        <option value="">Select your industry</option>
+                        <option value="restaurant">Restaurant/Food Service</option>
+                        <option value="retail">Retail</option>
+                        <option value="professional">Professional Services</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="construction">Construction</option>
+                        <option value="auto">Auto Services</option>
+                        <option value="beauty">Beauty/Spa</option>
+                        <option value="legal">Legal</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="real-estate">Real Estate</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="current-website">Current Website (if any)</label>
+                    <input type="url" id="current-website" name="current_website" placeholder="https://yoursite.com">
+                </div>
+            </div>
+            
+            <!-- Website Requirements -->
+            <div class="section">
+                <h2>Website Requirements</h2>
+                
+                <div class="form-group">
+                    <label for="business-description">Describe your business in 2-3 sentences <span class="required">*</span></label>
+                    <textarea id="business-description" name="business_description" required placeholder="What do you do? Who are your customers? What makes you different?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="website-goal">Main goal for your website <span class="required">*</span></label>
+                    <select id="website-goal" name="website_goal" required>
+                        <option value="">Select primary goal</option>
+                        <option value="generate-leads">Generate leads/inquiries</option>
+                        <option value="online-sales">Sell products online</option>
+                        <option value="showcase-work">Showcase work/portfolio</option>
+                        <option value="book-appointments">Book appointments</option>
+                        <option value="provide-info">Provide information</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Essential website pages (check all needed):</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="page-home" name="pages[]" value="home" checked>
+                            <label for="page-home">Home</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="page-about" name="pages[]" value="about">
+                            <label for="page-about">About Us</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="page-services" name="pages[]" value="services">
+                            <label for="page-services">Services</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="page-products" name="pages[]" value="products">
+                            <label for="page-products">Products</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="page-contact" name="pages[]" value="contact">
+                            <label for="page-contact">Contact</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="page-gallery" name="pages[]" value="gallery">
+                            <label for="page-gallery">Gallery/Portfolio</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="page-testimonials" name="pages[]" value="testimonials">
+                            <label for="page-testimonials">Testimonials</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="page-blog" name="pages[]" value="blog">
+                            <label for="page-blog">Blog</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="competitor-sites">Competitor websites you like (optional)</label>
+                    <textarea id="competitor-sites" name="competitor_sites" placeholder="List 2-3 websites in your industry that you think look good"></textarea>
+                </div>
+            </div>
+            
+            <!-- Content & Assets -->
+            <div class="section">
+                <h2>Content & Assets</h2>
+                
+                <div class="form-group">
+                    <label for="logo-ready">Do you have a logo ready? <span class="required">*</span></label>
+                    <select id="logo-ready" name="logo_ready" required>
+                        <option value="">Select option</option>
+                        <option value="yes">Yes, I have a high-quality logo file</option>
+                        <option value="basic">I have a basic logo that might need improvement</option>
+                        <option value="no">No, I need a logo created</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photos-ready">Do you have professional photos of your business/products? <span class="required">*</span></label>
+                    <select id="photos-ready" name="photos_ready" required>
+                        <option value="">Select option</option>
+                        <option value="yes">Yes, I have high-quality photos ready</option>
+                        <option value="some">I have some photos but they might need work</option>
+                        <option value="no">No, I need professional photos taken</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="content-ready">Website text/content <span class="required">*</span></label>
+                    <select id="content-ready" name="content_ready" required>
+                        <option value="">Select option</option>
+                        <option value="ready">I have all text ready to provide</option>
+                        <option value="partial">I have some content, need help with the rest</option>
+                        <option value="need-help">I need help writing all the content</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Timeline & Budget -->
+            <div class="section">
+                <h2>Timeline & Next Steps</h2>
+                
+                <div class="form-group">
+                    <label for="timeline">When do you need the website completed? <span class="required">*</span></label>
+                    <select id="timeline" name="timeline" required>
+                        <option value="">Select timeline</option>
+                        <option value="asap">ASAP (within 1 week)</option>
+                        <option value="2weeks">Within 2 weeks</option>
+                        <option value="month">Within a month</option>
+                        <option value="flexible">I'm flexible</option>
+                    </select>
+                </div>
+                
+                <div class="pricing-note">
+                    <strong>What's Included (FREE):</strong><br>
+                    • Professional responsive website (mobile-friendly)<br>
+                    • Contact forms and basic SEO<br>
+                    • 30 days of free hosting and support<br>
+                    <br>
+                    <strong>Ongoing Support:</strong> $100-150/month for hosting, maintenance, and updates
+                </div>
+            </div>
+            
+            <!-- Automation Opportunities -->
+            <div class="section">
+                <h2>Business Automation Opportunities</h2>
+                <p style="margin-bottom: 20px; color: #666;">These are optional paid services that can save you hours per week:</p>
+                
+                <div class="form-group">
+                    <label>Which of these business tasks take up most of your time? (check all that apply):</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="auto-scheduling" name="automation_needs[]" value="scheduling">
+                            <label for="auto-scheduling">Appointment scheduling</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="auto-followup" name="automation_needs[]" value="followup">
+                            <label for="auto-followup">Customer follow-ups</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="auto-inventory" name="automation_needs[]" value="inventory">
+                            <label for="auto-inventory">Inventory management</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="auto-invoicing" name="automation_needs[]" value="invoicing">
+                            <label for="auto-invoicing">Invoicing/billing</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="auto-social" name="automation_needs[]" value="social">
+                            <label for="auto-social">Social media posting</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="auto-crm" name="automation_needs[]" value="crm">
+                            <label for="auto-crm">Customer relationship management</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="auto-reports" name="automation_needs[]" value="reports">
+                            <label for="auto-reports">Business reporting</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="auto-none" name="automation_needs[]" value="none">
+                            <label for="auto-none">None - just want the website</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="current-tools">What tools/software do you currently use for your business?</label>
+                    <textarea id="current-tools" name="current_tools" placeholder="e.g., QuickBooks, Square, Google Calendar, Excel spreadsheets, etc."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="biggest-challenge">What's your biggest business challenge right now?</label>
+                    <textarea id="biggest-challenge" name="biggest_challenge" placeholder="e.g., not enough customers, too much manual work, disorganized systems, etc."></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                Submit Application - Get Your FREE Website!
+            </button>
+        </form>
+    </div>
+    
+    <script>
+        // Form handling with Formspree
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const formData = new FormData(form);
+            
+            // Handle checkboxes by converting to comma-separated strings
+            const pages = Array.from(document.querySelectorAll('input[name="pages[]"]:checked')).map(cb => cb.value);
+            const automationNeeds = Array.from(document.querySelectorAll('input[name="automation_needs[]"]:checked')).map(cb => cb.value);
+            
+            // Remove existing checkbox entries and add as strings
+            formData.delete('pages[]');
+            formData.delete('automation_needs[]');
+            formData.append('pages', pages.join(', '));
+            formData.append('automation_needs', automationNeeds.join(', '));
+            
+            // Submit to Formspree
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your application has been submitted. We\'ll contact you within 24 hours to schedule your free consultation.');
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwnProperty.call(data, 'errors')) {
+                            alert('There was an error: ' + data.errors.map(error => error.message).join(', '));
+                        } else {
+                            alert('There was an error submitting the form. Please try again.');
+                        }
+                    });
+                }
+            }).catch(error => {
+                alert('There was an error submitting the form. Please try again.');
+            });
+        });
+        
+        // Auto-uncheck "None" if other automation options are selected
+        document.querySelectorAll('input[name="automation_needs[]"]:not(#auto-none)').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('auto-none').checked = false;
+                }
+            });
+        });
+        
+        document.getElementById('auto-none').addEventListener('change', function() {
+            if (this.checked) {
+                document.querySelectorAll('input[name="automation_needs[]"]:not(#auto-none)').forEach(cb => cb.checked = false);
+            }
+        });
+    </script>
+</body>
+</html>
